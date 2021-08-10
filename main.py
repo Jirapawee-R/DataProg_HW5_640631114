@@ -7,11 +7,12 @@ profit = p.LpProblem('IceCream_maxProfit_Analysis', p.LpMinimize)
 
 # (II) Set up problem variables :
 # Box of vanilla ice-cream
-vanilla = p.LpVariable('v', lowBound=0)
+vanilla = p.LpVariable('vanilla', lowBound=0)
 # Box of strawberry ice-cream
-strawberry = p.LpVariable('s', lowBound=0)
+strawberry = p.LpVariable('strawberry', lowBound=0)
 
-
+# Create objective function :
+profit += (2*vanilla)+(3*strawberry)
 
 
 
