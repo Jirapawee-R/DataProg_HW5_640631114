@@ -12,8 +12,13 @@ vanilla = p.LpVariable('vanilla', lowBound=0)
 strawberry = p.LpVariable('strawberry', lowBound=0)
 
 # Create objective function :
-profit += (2*vanilla)+(3*strawberry)
+profit += (2*vanilla) + (3*strawberry)
 
+# Create constraints :
+# (I) Amount of daily fresh milk order
+profit += (0.5*vanilla) + (0.2*strawberry) <= 10
+# (II) Number of doll for promoting in a day
+profit += vanilla + strawberry <= 30
 
 
 
