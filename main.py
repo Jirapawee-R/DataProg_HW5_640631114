@@ -3,7 +3,7 @@ import pulp as p
 
 # Set up a maximization problem and its variable
 # (I) Name the problem as "IceCream_maxProfit_Analysis" using objective of minimizing cost :
-profit = p.LpProblem('IceCream_maxProfit_Analysis', p.LpMinimize)
+profit = p.LpProblem('IceCream_maxProfit_Analysis', p.LpMaximize)
 
 # (II) Set up problem variables :
 # Box of vanilla ice-cream
